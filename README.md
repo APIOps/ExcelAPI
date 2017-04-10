@@ -13,13 +13,16 @@ It is decided that we'll use available software to build the tool chain with the
 
 **To get JSON from CSV file**
 
+
 ``` csv-to-json <members.csv | jq '{ members: . }' > db.json ``` 
 
 We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
 
 **Install and run JSON server**
+
 ``` sudo npm install -g json-server; json-server --watch db.json ```
 
 **All combined**
+
 ``` pip install --user csv2json; csv-to-json <members.csv | jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
