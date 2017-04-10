@@ -32,10 +32,6 @@ We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
 ``` sudo npm install -g json-server; json-server --watch db.json ```
 
-**All combined first time run**
-
-``` pip install --user csv2json; ~/.local/bin/csv-to-json < sources/members.csv | ~/.local/bin/jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
-
 **After tools have been installed**
 
 ``` python ~/.local/bin/in2csv sources/members.xlsx > sources/members.csv; ~/.local/bin/csv-to-json < sources/members.csv | ~/.local/bin/jq '{ members: . }' > db.json; json-server --watch db.json``` 
