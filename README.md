@@ -1,5 +1,5 @@
 # ExcelAPI
-Excel API as a Service
+Excel API as a Service. In the experiment we'll use one CSV file (members.csv). 
 
 ## Toolchain to make it happen
 
@@ -11,18 +11,15 @@ It is decided that we'll use available software to build the tool chain with the
 
 ## Commands used
 
-**To get CSV from Excel file**
+**To get JSON from CSV file**
 
-Ways to proceed: 
+``` csv-to-json <members.csv | jq '{ members: . }' > db.json ``` 
 
-Use Libre office: ``` libreoffice --headless --convert-to csv $filename --outdir $outdir ```
-
-``` command ```
+We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
 
-**To get REST API from CSV file**
+**Install and run JSON server**
+``` sudo npm install -g json-server; json-server --watch db.json ```
 
-``` command ```
-
-
-
+**All combined**
+``` pip install --user csv2json; csv-to-json <members.csv | jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
