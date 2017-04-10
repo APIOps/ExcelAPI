@@ -13,6 +13,10 @@ It is decided that we'll use available software to build the tool chain with the
 
 **To get CSV from Excel file**
 
+Ways to proceed: 
+
+Use Libre office: ``` libreoffice --headless --convert-to csv $filename --outdir $outdir ```
+
 ``` command ```
 
 
