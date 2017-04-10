@@ -9,6 +9,15 @@ Below is rough sketch about the toolchain needed. At this point I decided not to
 
 It is decided that we'll use available software to build the tool chain with the aim not to code anything. We use just CLI tools and run the process in Debian server. 
 
+## Tools used
+
+* https://stedolan.github.io/jq/download/ 
+* json-server
+* csv-to-json
+* npm
+* pip
+* 
+
 ## Commands used
 
 **To get JSON from CSV file**
