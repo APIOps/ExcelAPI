@@ -1,5 +1,5 @@
 # ExcelAPI
-Excel API as a Service. In the experiment we'll use one CSV file (members.xsls). 
+Excel API as a Service. In the experiment we'll use one XLS file (members.xslx) which is sources folder. 
 
 ## Toolchain to make it happen
 
