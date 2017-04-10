@@ -11,7 +11,7 @@ It is decided that we'll use available software to build the tool chain with the
 
 ## Tools used
 
-* https://stedolan.github.io/jq/download/ 
+* https://stedolan.github.io/jq/download/  (manually downloaded and copied to local/bin)
 * json-server
 * csv-to-json
 * npm
@@ -23,7 +23,7 @@ It is decided that we'll use available software to build the tool chain with the
 **To get JSON from CSV file**
 
 
-``` ~/.local/bin/csv-to-json <members.csv | jq '{ members: . }' > db.json ``` 
+``` ~/.local/bin/csv-to-json <members.csv | ~/.local/bin/jq '{ members: . }' > db.json ``` 
 
 We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
@@ -32,6 +32,10 @@ We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
 ``` sudo npm install -g json-server; json-server --watch db.json ```
 
-**All combined**
+**All combined first time run**
 
-``` pip install --user csv2json; ~/.local/bin/csv-to-json <members.csv | jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
+``` pip install --user csv2json; ~/.local/bin/csv-to-json < sources/members.csv | ~/.local/bin/jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
+
+**After tools have been installed**
+
+``` ~/.local/bin/csv-to-json < sources/members.csv | ~/.local/bin/jq '{ members: . }' > db.json; json-server --watch db.json```
