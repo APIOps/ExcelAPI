@@ -14,7 +14,7 @@ It is decided that we'll use available software to build the tool chain with the
 **To get JSON from CSV file**
 
 
-``` csv-to-json <members.csv | jq '{ members: . }' > db.json ``` 
+``` ~/.local/bin/csv-to-json <members.csv | jq '{ members: . }' > db.json ``` 
 
 We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
