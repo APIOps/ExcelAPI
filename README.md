@@ -39,3 +39,6 @@ We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 **After tools have been installed**
 
 ``` ~/.local/bin/csv-to-json < sources/members.csv | ~/.local/bin/jq '{ members: . }' > db.json; json-server --watch db.json```
+
+
+![json-server](https://raw.githubusercontent.com/APIOps/ExcelAPI/master/images/json-server.png)
