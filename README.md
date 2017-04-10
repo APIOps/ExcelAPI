@@ -25,4 +25,4 @@ We needed to add ```jq``` in the middle to make JSON acceptable for json-server
 
 **All combined**
 
-``` pip install --user csv2json; csv-to-json <members.csv | jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
+``` pip install --user csv2json; ~/.local/bin/csv-to-json <members.csv | jq '{ members: . }' > db.json; sudo npm install -g json-server; json-server --watch db.json ```
